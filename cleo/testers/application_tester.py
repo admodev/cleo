@@ -1,7 +1,4 @@
-from clikit.args import StringArgs
-
 from cleo import Application
-from cleo.io import BufferedIO
 
 
 class ApplicationTester(object):

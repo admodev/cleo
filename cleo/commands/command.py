@@ -2,20 +2,6 @@ import re
 
 from typing import Optional
 
-from clikit.api.args import Args
-from clikit.api.args.format import ArgsFormat
-from clikit.api.formatter import Style
-from clikit.api.io import IO
-from clikit.args import StringArgs
-from clikit.io import NullIO
-from clikit.ui.components import ChoiceQuestion
-from clikit.ui.components import ConfirmationQuestion
-from clikit.ui.components import ProgressIndicator
-from clikit.ui.components import Question
-from clikit.ui.components import Table
-from clikit.ui.style import TableStyle
-
-from cleo.io import ConsoleIO
 from cleo.parser import Parser
 
 from .base_command import BaseCommand
@@ -26,13 +12,6 @@ class Command(BaseCommand):
     signature = None
 
     validation = None
-
-    TABLE_STYLES = {
-        "ascii": TableStyle.ascii(),
-        "borderless": TableStyle.borderless(),
-        "solid": TableStyle.solid(),
-        "compact": TableStyle.compact(),
-    }
 
     def __init__(self):
         self._args = Args(ArgsFormat())

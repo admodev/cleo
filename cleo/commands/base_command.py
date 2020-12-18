@@ -1,11 +1,5 @@
 from typing import Optional
 
-from clikit.api.args import Args
-from clikit.api.command import Command as CliKitCommand
-from clikit.api.config.command_config import CommandConfig
-
-from cleo.io import ConsoleIO
-
 
 class CommandError(Exception):
     pass

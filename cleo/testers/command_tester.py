@@ -1,9 +1,4 @@
-from clikit.api.command import Command
-from clikit.args import StringArgs
-from clikit.formatter import AnsiFormatter
-
 from cleo.commands import BaseCommand
-from cleo.io import BufferedIO
 
 
 class CommandTester(object):

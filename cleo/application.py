@@ -1,14 +1,11 @@
 from typing import Optional
 from typing import Tuple
 
-from clikit.console_application import ConsoleApplication
-
 from .commands import BaseCommand
 from .commands.completions_command import CompletionsCommand
-from .config import ApplicationConfig
 
 
-class Application(ConsoleApplication, object):
+class Application:
     """
     An Application is the container for a collection of commands.
 

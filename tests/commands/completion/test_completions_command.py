@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 
 import os
+
 import pytest
 
 from cleo import Application
 from cleo import CommandTester
 
-from .fixtures.hello_command import HelloCommand
 from .fixtures.command_with_colons import CommandWithColons
+from .fixtures.hello_command import HelloCommand
+
 
 app = Application()
 app.add(HelloCommand())

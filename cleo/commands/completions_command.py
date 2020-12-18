@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 
-import os
 import hashlib
+import os
 import posixpath
 import re
 import subprocess
 
-from .._compat import encode
 from ..helpers import argument
 from ..helpers import option
-
 from .command import Command
 from .completions.templates import TEMPLATES
 
@@ -392,7 +390,7 @@ script. Consult your shells documentation for how to add such directives.
     def _generate_function_name(self, script_name, script_path):
         return "_{}_{}_complete".format(
             self._sanitize_for_function_name(script_name),
-            hashlib.md5(encode(script_path)).hexdigest()[0:16],
+            hashlib.md5(script_path.encode()).hexdigest()[0:16],
         )
 
     def _sanitize_for_function_name(self, name):
